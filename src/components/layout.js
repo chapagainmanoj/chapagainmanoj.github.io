@@ -9,6 +9,7 @@ class Layout extends React.Component {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
+    const projectPath = `${__PATH_PREFIX__}/blog/`
     let header
 
     if (location.pathname === rootPath || location.pathname === blogPath) {
@@ -67,9 +68,9 @@ class Layout extends React.Component {
           <main>{children}</main>
         </div>
         <Footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()} Tejan, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          Gatsby & Netlify
         </Footer>
       </Wrapper>
     )
