@@ -1,22 +1,38 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import Nav from '../components/nav'
 
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
+  getPath = (path) => {
+    const rootPath = `${__PATH_PREFIX__}/`
+    const blogPath = `${__PATH_PREFIX__}/blog/`
+    const projectPath = `${__PATH_PREFIX__}/project/`
+    switch (path) {
+      case rootPath:
+        return `/`
+      case blogPath:
+        return `/blog/`
+      case projectPath:
+        return `/project/`
+      default:
+        return `/`
+    }
+  }
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const blogPath = `${__PATH_PREFIX__}/blog/`
-    const projectPath = `${__PATH_PREFIX__}/blog/`
+    const projectPath = `${__PATH_PREFIX__}/project/`
     let header
 
-    if (location.pathname === rootPath || location.pathname === blogPath) {
+    if (location.pathname === rootPath || location.pathname === blogPath || location.pathname === projectPath) {
       header = (
-        <h1
+        <h2
           style={{
-            ...scale(1.5),
+            ...scale(1),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -27,11 +43,11 @@ class Layout extends React.Component {
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
+            to={this.getPath(location.pathname)}
           >
             {title}
           </Link>
-        </h1>
+        </h2>
       )
     } else {
       header = (
@@ -64,6 +80,7 @@ class Layout extends React.Component {
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
+          <Nav path={location.pathname} />
           <header>{header}</header>
           <main>{children}</main>
         </div>

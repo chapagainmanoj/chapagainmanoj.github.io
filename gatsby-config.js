@@ -18,7 +18,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     {
@@ -33,6 +32,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/project`,
+        name: `project`,
       },
     },
     {
@@ -75,8 +81,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Tejan Adhakari Blog`,
+        short_name: `tejanadh`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -85,6 +91,7 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

@@ -5,11 +5,15 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const projectPost = path.resolve(`./src/templates/project.js`)
+
+
   return graphql(
     `
       {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
+        postList: allMdx(
+          sort: { fields: [frontmatter___date], order: DESC },
+          filter: {frontmatter: {type: {ne: "project"}}},
           limit: 1000
         ) {
           edges {
@@ -18,7 +22,25 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
               }
               frontmatter {
-                title
+                title,
+                type
+              }
+            }
+          }
+        }
+        projectList: allMdx(
+          sort: { fields: [frontmatter___date], order: DESC },
+          filter: {frontmatter: {type: {eq: "project"}}}
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title,
+                type
               }
             }
           }
@@ -31,7 +53,8 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allMdx.edges
+    const posts = result.data.postList.edges
+    const projects = result.data.projectList.edges
 
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -40,6 +63,20 @@ exports.createPages = ({ graphql, actions }) => {
       createPage({
         path: `blog${post.node.fields.slug}`,
         component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+    projects.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
+      createPage({
+        path: `project${post.node.fields.slug}`,
+        component: projectPost,
         context: {
           slug: post.node.fields.slug,
           previous,
