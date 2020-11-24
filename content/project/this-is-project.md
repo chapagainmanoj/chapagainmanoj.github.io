@@ -1,12 +1,9 @@
 ---
-path: blog name
+path: khalti-sdk-web
 date: 2020-06-07T08:32:34.246Z
-title: My Projects
+title: Khalti Payement Gateway SDK
 type: project
-description: it is all  about  jamstack
+description: Javascript SDK for developers who are looking to integrate Khalti
+  as a Payment Option in their online platform.
 ---
-### Wordpress and Other CMS are over rated
-
-![](../assets/me.jpg)
-
-I wanna tell api is overrated. jamstack is new way of cms
+https://github.com/khalti/khalti-sdk-web
