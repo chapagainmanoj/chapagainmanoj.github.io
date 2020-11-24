@@ -8,4 +8,4 @@ description: Javascript SDK for developers who are looking to integrate Khalti
 ---
 Javascript SDK for developers who are looking to integrate Khalti as a Payment Option in their online platform.
 
-[Github](https://github.com/khalti/khalti-sdk-web)    [Docs](docs.khalti.com)
+[Github](https://github.com/khalti/khalti-sdk-web)    [Docs](https://docs.khalti.com/)
