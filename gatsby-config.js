@@ -4,7 +4,7 @@ module.exports = {
     title: `Manoj Chapagain`,
     author: `chapagainmanoj`,
     description: `This is a personal blog by manoj`,
-    siteUrl: `https://tejanadh.netlify.com/`,
+    siteUrl: `https://manojchapagain.codes/`,
     social: {
       facebook: `chapagainmanoj`,
       twitter: `gatsbyjs`,
@@ -81,8 +81,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tejan Adhakari Blog`,
-        short_name: `tejanadh`,
+        name: `Manoj Chapagain Blog`,
+        short_name: `chapagainmanoj`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
