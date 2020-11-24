@@ -1,9 +1,9 @@
 ---
 path: blog name
 date: 2020-06-07T08:32:34.246Z
-title: This is project
+title: My Projects
+type: project
 description: it is all  about  jamstack
-type: 'project'
 ---
 ### Wordpress and Other CMS are over rated
 
