@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Tejan Adhakari`,
+    title: `Manoj Chapagain`,
     author: `chapagainmanoj`,
     description: `This is a personal blog by manoj`,
     siteUrl: `https://tejanadh.netlify.com/`,

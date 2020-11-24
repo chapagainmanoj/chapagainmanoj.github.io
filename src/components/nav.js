@@ -3,7 +3,7 @@ import {Link} from 'gatsby';
 import styled from 'styled-components';
 import './nav.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faTwitter, faInstagram, faLinkedin, faFacebook } from '@fortawesome/free-solid-svg-icons'
+import { faChessKnight, faAt } from '@fortawesome/free-solid-svg-icons'
 
 class Nav extends React.Component {
   activeClass = (link) => {
@@ -26,10 +26,10 @@ class Nav extends React.Component {
         <Link className={`nav ${this.activeClass('/project/')}`} to={`/project/`}>Projects</Link>
         <Link className={`nav ${this.activeClass('/blog/')}`} to={`/blog/`}>Blog</Link>
         <span style={{float: 'right'}}>
-          <a className={`icon`} href={`https://twitter.com`} target={'_blank'}><FontAwesomeIcon icon={['fab', 'twitter']} /></a>
-          <a className={`icon`} href={`https://facebook.com`} target={'_blank'}><FontAwesomeIcon icon={['fab', 'facebook']} /></a>
-          <a className={`icon`} href={`https://instagram.com`} target={'_blank'}><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
+          <a className={`icon`} href={`mailto:chapagainmanoj@gmail.com`} target={'_blank'}><FontAwesomeIcon icon={faAt} /></a>
+          <a className={`icon`} href={`https://github.com/chapagainmanoj`} target={'_blank'}><FontAwesomeIcon icon={['fab', 'github']} /></a>
           <a className={`icon`} href={`https://linkedin.com`} target={'_blank'}><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+          <a className={`icon`} href={`https://lichess.org/@/imsober`} target={'_blank'}><FontAwesomeIcon icon={faChessKnight} /></a>
         </span>
       </div>
     )

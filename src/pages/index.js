@@ -12,13 +12,13 @@ library.add(fab, faCheckSquare, faCoffee)
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Tejan Adhakari"
+    const siteTitle = "Manoj Chapagain"
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Home"
-          keywords={[`blog`, `tejanadh`, `mythings`, `mechanical`]}
+          keywords={[`blog`, `manoj`, `mythings`, `computer`, `web-developer`]}
         />
         <img style={{ margin: 0 }} src="./me.jpg" alt="Gatsby Scene" />
         <h2>
@@ -27,12 +27,12 @@ class IndexPage extends React.Component {
             👋
           </span>
         </h2>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
+        <p>I am a full stack web developer.</p>
         <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
+        I'm passionate about the technology -- not a specific framework or language. I think, 
+          it's about adaption and what works best for the project. I'm open to learning any stack if its works.
         </p>
-        <p>Now go build something great!</p>
+        <p>Currently, I am open for new challenges. Here is my <a target="_blank" href="./ResumeDocs.pdf">Resume</a>. Lets build something together!</p>
       </Layout>
     )
   }

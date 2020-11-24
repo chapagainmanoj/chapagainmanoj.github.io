@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: chapagainmanoj/tejanadh
+  repo: chapagainmanoj/chapagainmanoj.github.io
 
 media_folder: content/assets
 public_folder: ../assets
