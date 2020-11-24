@@ -8,7 +8,7 @@ description: I had never indulged myself to write before. I don't know why I
   other than straightforward truth. Trust me, bullshit is more dangerous than a
   lie.
 ---
-[Bullshit is everywhere](https://www.youtube.com/watch?v=XPrRxhYJMkQ&t=182s). Politicians and motivational speakers have mastered the art. Ads, marketing and PR are its recognized regiment. Even, journalism has changed these days. When you read (daily paper) news, online news, are you reading facts or propaganda? Mediocrity and venality are seemingly infecting it. Social network floods with ton loads of shit posts and clickjacks; news portal full of sponsored news. (politician photo). Reality is becoming opaque concept as bullshiting is plaguing every aspect of life.
+[Bullshit is everywhere](https://www.youtube.com/watch?v=XPrRxhYJMkQ&t=182s). Politicians and motivational speakers have mastered the art. Ads, marketing and PR are its recognized regiment. Even, journalism has changed these days. When you read (daily paper) news, online news, are you reading facts or propaganda? Mediocrity and venality are seemingly infecting it. Social network floods with ton loads of shit posts and clickjacks; news portal full of sponsored news. Reality is becoming opaque concept as bullshiting is plaguing every aspect of life.
 
 ![Politicians are the master of lies.](../assets/trump.jpeg "Unintelligent Bullshit")
 
