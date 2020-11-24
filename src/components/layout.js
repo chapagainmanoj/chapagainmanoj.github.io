@@ -85,7 +85,7 @@ class Layout extends React.Component {
           <main>{children}</main>
         </div>
         <Footer>
-          © {new Date().getFullYear()} Tejan, Built with
+          © {new Date().getFullYear()} Manoj, Built with
           {` `}
           Gatsby & Netlify
         </Footer>
