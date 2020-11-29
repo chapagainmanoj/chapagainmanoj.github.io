@@ -1,6 +1,6 @@
 ---
 path: I smell bullshit
-date: 2020-06-07T08:32:34.246Z
+date: 2018-02-05T08:32:34.246Z
 title: I smell bullshit
 description: I had never indulged myself to write before. I don't know why I
   never concerned writing. It may be the feeling that it will be a blend of my

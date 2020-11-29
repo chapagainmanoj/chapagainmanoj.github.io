@@ -11,35 +11,27 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        postList: allMdx(
-          sort: { fields: [frontmatter___date], order: DESC },
-          filter: {frontmatter: {type: {ne: "project"}}},
-          limit: 1000
-        ) {
+        postList: allMdx(filter: {fileAbsolutePath: {regex: "/content/blog/"}}, sort: {order: DESC, fields: frontmatter___date}, limit: 10) {
           edges {
             node {
               fields {
                 slug
               }
               frontmatter {
-                title,
+                title
                 type
               }
             }
           }
         }
-        projectList: allMdx(
-          sort: { fields: [frontmatter___date], order: DESC },
-          filter: {frontmatter: {type: {eq: "project"}}}
-          limit: 1000
-        ) {
+        projectList: allMdx(filter: {fileAbsolutePath: {regex: "/content/project/"}}, sort: {order: DESC, fields: frontmatter___date}, limit: 10) {
           edges {
             node {
               fields {
                 slug
               }
               frontmatter {
-                title,
+                title
                 type
               }
             }
@@ -48,6 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `
   ).then(result => {
+    console.log(result)
     if (result.errors) {
       throw result.errors
     }
@@ -59,6 +52,8 @@ exports.createPages = ({ graphql, actions }) => {
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
+
+      console.log(post.node.fields.slug, 'posts');
 
       createPage({
         path: `blog${post.node.fields.slug}`,
@@ -74,6 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
+      console.log(post.node.fields.slug, 'project')
       createPage({
         path: `project${post.node.fields.slug}`,
         component: projectPost,

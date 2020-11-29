@@ -2,7 +2,7 @@
 path: query by humming
 date: 2020-11-25T13:25:39.627Z
 title: Query By Humming
-type: Research
+type: research, project
 description: Effects of Auto Tuning and Pitch Normalization on Query byHumming
 ---
 Research paper published in International Journal of Advanced engineering.
