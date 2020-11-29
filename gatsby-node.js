@@ -40,7 +40,6 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `
   ).then(result => {
-    console.log(result)
     if (result.errors) {
       throw result.errors
     }
@@ -53,8 +52,6 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
-      console.log(post.node.fields.slug, 'posts');
-
       createPage({
         path: `blog${post.node.fields.slug}`,
         component: blogPost,
@@ -66,10 +63,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
     projects.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+      const previous = index === projects.length - 1 ? null : projects[index + 1].node
+      const next = index === 0 ? null : projects[index - 1].node
 
-      console.log(post.node.fields.slug, 'project')
       createPage({
         path: `project${post.node.fields.slug}`,
         component: projectPost,
